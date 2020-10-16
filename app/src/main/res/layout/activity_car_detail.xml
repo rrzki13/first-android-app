@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@id/drawer_layout"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".CarDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/set_dark_bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/eighty"
+        android:translationZ="8dp"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/the_dialog"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:translationZ="9dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="15dp">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/detail_car_img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/indesignlogo"
+        android:fitsSystemWindows="true"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/detail_car_nama_mobil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_below="@id/detail_car_img"
+        android:text="@string/nama_mobil"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/harga_per_day"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/idr_1000000_day"/>
+
+    <TextView
+        android:id="@+id/gambar_send"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/idr_1000000_day"/>
+
+    <TextView
+        android:id="@+id/detail_car_harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_car_nama_mobil"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/gray"
+        android:text="@string/idr_1000000_day"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/detail_car_harga"/>
+
+
+    <View
+        android:layout_below="@id/hr"
+        android:layout_marginTop="10dp"
+        android:id="@+id/middle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_deskripsi_car"
+        android:layout_below="@id/hr"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignEnd="@id/middle"
+        android:layout_alignParentStart="true"
+        android:text="@string/deskripsi"/>
+
+    <View
+        android:id="@+id/hr_deksripsi"
+        android:layout_alignEnd="@id/middle"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_deskripsi_car"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="35dp"/>
+
+    <TextView
+        android:id="@+id/tv_detail_car"
+        android:layout_below="@id/hr"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/middle"
+        android:layout_alignParentEnd="true"
+        android:text="@string/detail"/>
+
+    <View
+        android:alpha="0"
+        android:id="@+id/hr_detail"
+        android:layout_alignStart="@id/middle"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tv_deskripsi_car"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="35dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/hr_deksripsi"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@id/btn_sewa">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <LinearLayout
+                android:id="@+id/menu1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detail_car_deskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:text="@string/lorem2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu2"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detail_car_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:text="@string/lorem"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    
+    <Button
+        android:id="@+id/btn_sewa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sewa_mobil"/>
+
+</RelativeLayout>

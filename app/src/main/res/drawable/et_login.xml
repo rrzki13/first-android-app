@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/et_login_focus"
+        android:state_focused="true"/>
+
+    <item
+        android:drawable="@drawable/et_login_focus"
+        android:state_pressed="true"/>
+
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/et_login_focus"/>
+
+    <item
+        android:drawable="@drawable/et_login_unfocus"/>
+
+</selector>

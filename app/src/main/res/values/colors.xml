@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C3A54</color>
+    <color name="colorPrimaryDark">#1F3F58</color>
+    <color name="colorAccent">#009C9B</color>
+    <color name="white">#fff</color>
+    <color name="black">#202020</color>
+    <color name="eighty">#CC202020</color>
+    <color name="gray">#6c757d</color>
+    <color name="success">#28a745</color>
+    <color name="danger">#dc3545</color>
+    <color name="blue">#007bff</color>
+</resources>
